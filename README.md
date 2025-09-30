@@ -7,8 +7,8 @@ A comprehensive RAG (Retrieval-Augmented Generation) toolkit built with LlamaInd
 - 🚀 **Modern Python 3.12** - Built with the latest Python features
 - 📚 **LlamaIndex Integration** - Powerful document indexing and retrieval
 - ⚡ **FAISS Vector Store** - High-performance similarity search
-- �️ **JSON Document Support** - Specialized indexing for JSON files by entries
-- �🔧 **CLI Interface** - Easy-to-use command-line tools  
+- 🗄️ **JSON Document Support** - Specialized indexing for JSON files by entries
+- 🔧 **CLI Interface** - Easy-to-use command-line tools
 - 🏗️ **Modular Architecture** - Clean separation of concerns with inheritance-based design
 - 📦 **uv & hatchling** - Modern Python packaging and dependency management
 - 🧪 **Type Safety** - Full type hints and mypy support
@@ -31,7 +31,7 @@ cd rag-in-python
 
 2. Install with uv (recommended):
 ```bash
-uv sync --dev
+uv sync --extra dev
 ```
 
 ## Quick Start
@@ -156,40 +156,41 @@ git clone https://github.com/Akamai-SIA-Mobile/rag-in-python.git
 cd rag-in-python
 
 # Install with development dependencies
-uv sync --dev
+uv sync --extra dev
 
 # Set up pre-commit hooks
-pre-commit install
+uv run pre-commit install
 ```
 
 ### Running tests
 
 ```bash
 # Run all tests
-pytest
+uv run pytest
 
 # Run tests with coverage
-pytest --cov=rag_in_python
+uv run pytest --cov=rag_in_python
 
 # Run specific test categories
-pytest -m "not slow"  # Skip slow tests
-pytest -m "unit"      # Unit tests only
+uv run pytest -m "not slow"  # Skip slow tests
+uv run pytest -m "unit"      # Unit tests only
 ```
 
 ### Code quality
 
 ```bash
 # Format code
-black src/ tests/
+uv run black src/ tests/
 
-# Lint code  
-ruff src/ tests/
+# Lint code
+uv run ruff check src/ tests/
+uv run ruff check --fix src/ tests/
 
 # Type checking
-mypy src/
+uv run mypy src/
 
 # Run all checks
-pre-commit run --all-files
+uv run pre-commit run --all-files
 ```
 
 ### Building the package
