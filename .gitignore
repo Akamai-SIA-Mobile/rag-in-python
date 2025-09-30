@@ -196,3 +196,6 @@ vector_index/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Conda environments
+.conda/
