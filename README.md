@@ -19,6 +19,7 @@ A comprehensive RAG (Retrieval-Augmented Generation) toolkit built with LlamaInd
 ### Requirements
 
 - Python 3.12+
+- [uv](https://docs.astral.sh/uv/) - Fast Python package manager
 - OpenAI API key (set as `OPENAI_API_KEY` environment variable)
 
 ### Development Installation
