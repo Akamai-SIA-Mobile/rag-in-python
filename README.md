@@ -35,6 +35,11 @@ cd rag-in-python
 uv sync --extra dev
 ```
 
+3. Activate `uv` environment, so that no need using `uv run` before commands:
+```bash
+source .venv/bin/activate
+```
+
 ## Quick Start
 
 ### 1. Set up your environment
